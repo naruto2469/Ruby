@@ -1,0 +1,2 @@
+string = 'Ruby and Ruby on on on Rails'.split(" ")
+print "Ruby:" + string.count('Ruby').to_s + ", " + "and:" + string.count('and').to_s + ", " + "on:" + string.count('on').to_s + ", " + "Rails:" + string.count('Rails').to_s

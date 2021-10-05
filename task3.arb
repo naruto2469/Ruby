@@ -1,0 +1,3 @@
+string = 'I love Ruby'
+result = string.split.map(&:chr).join.upcase
+puts result

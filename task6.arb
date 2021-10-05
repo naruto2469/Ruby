@@ -1,0 +1,15 @@
+def self.merge_diapason(diapason)
+  diapason = diapason.sort_by {|r| r.first }
+  *outages = diapason.shift
+  diapason.each do |r|
+    lastr = outages[-1]
+    if lastr.last >= r.first - 1
+      outages[-1] = lastr.first..[r.last, lastr.last].max
+    else
+      outages.push(r)
+    end
+  end
+  outages
+end
+diapason = [1..9, 30..30, 4..11, 40..45, 39..50]
+print merge_diapason(diapason)
